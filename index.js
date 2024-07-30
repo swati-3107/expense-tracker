@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const protect = require("./middleware/protected");
+const path = require("path");
 require("dotenv").config({ path: "./.env" });
 
 // middleware
@@ -11,8 +12,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://expense-tracker-wxkk.onrender.com",
-    origin: "http://localhost:4200",
+    origin: "https://expense-tracker-tii6.onrender.com",
+    // origin: "http://localhost:4200",
     credentials: true,
   })
 );
